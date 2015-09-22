@@ -125,7 +125,7 @@ angular.module('ui.grid')
        * @description Definition / configuration of an individual column, which would typically be
        * one of many column definitions within the gridOptions.columnDefs array
        * @example
-       * <pre>{name:'field1', field: 'field1', filter: { term: 'xxx' }}</pre>
+       * <pre>{name:'field1', field: 'field1', filter: { term: 'xxx' ]}</pre>
        *
        */
 

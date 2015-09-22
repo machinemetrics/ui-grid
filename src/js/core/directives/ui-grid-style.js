@@ -22,7 +22,7 @@
    </script>
 
    <div ng-controller="MainCtrl">
-   <style ui-grid-style>{{ myStyle }}</style>
+   <style ui-grid-style>{[ myStyle ]}</style>
    <span class="blah">I am in a box.</span>
    </div>
    </doc:source>

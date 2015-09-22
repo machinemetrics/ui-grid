@@ -14,7 +14,7 @@ describe('ui.grid.edit GridCellDirective - with dropdown', function () {
     uiGridConstants = _uiGridConstants_;
     $timeout = _$timeout_;
 
-    $templateCache.put('ui-grid/uiGridCell', '<div class="ui-grid-cell-contents">{{COL_FIELD CUSTOM_FILTERS}}</div>');
+    $templateCache.put('ui-grid/uiGridCell', '<div class="ui-grid-cell-contents">{[COL_FIELD CUSTOM_FILTERS]}</div>');
     $templateCache.put('ui-grid/dropdownEditor', '<div><form name="inputForm"><select ng-class="\'colt\' + col.uid" ui-grid-edit-dropdown ng-model="MODEL_COL_FIELD" ng-options="field[editDropdownIdLabel] as field[editDropdownValueLabel] for field in editDropdownOptionsArray CUSTOM_FILTERS"></select></form></div>');
 
     scope = $rootScope.$new();

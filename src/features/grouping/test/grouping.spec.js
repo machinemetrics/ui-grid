@@ -555,7 +555,7 @@ describe('ui.grid.grouping uiGridGroupingService', function () {
           { field: 'col2', colName: 'col2', groupPriority: 1 }
         ],
         aggregations: [
-          { field: 'col1', colName: 'col1', aggregation: { type: uiGridGroupingConstants.aggregation.COUNT }}
+          { field: 'col1', colName: 'col1', aggregation: { type: uiGridGroupingConstants.aggregation.COUNT ]}
         ],
         rowExpandedStates: { male: { state: 'expanded' } }
       });

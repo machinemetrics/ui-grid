@@ -409,9 +409,9 @@ describe('ui.grid.saveState uiGridSaveStateService', function () {
 
       expect( onSortChangedHook.calls.length ).toEqual( 1 );
 
-      expect( onSortChangedHook ).toHaveBeenCalledWith( 
-        grid, 
-        [ grid.getOnlyDataColumns()[3], grid.getOnlyDataColumns()[2] ] 
+      expect( onSortChangedHook ).toHaveBeenCalledWith(
+        grid,
+        [ grid.getOnlyDataColumns()[3], grid.getOnlyDataColumns()[2] ]
       );
     });
 
@@ -655,7 +655,7 @@ describe('ui.grid.saveState uiGridSaveStateService', function () {
 
   describe('restoreGrouping', function() {
     beforeEach( function() {
-      grid.api.grouping = { setGrouping: function() {}};
+      grid.api.grouping = { setGrouping: function() {]};
       spyOn( grid.api.grouping, 'setGrouping' ).andCallFake(function() {});
     });
 
@@ -674,7 +674,7 @@ describe('ui.grid.saveState uiGridSaveStateService', function () {
 
   describe('restoreTreeView', function() {
     beforeEach( function() {
-      grid.api.treeView = { setTreeView: function() {}};
+      grid.api.treeView = { setTreeView: function() {]};
       spyOn( grid.api.treeView, 'setTreeView' ).andCallFake(function() {});
     });
 

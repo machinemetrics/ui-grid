@@ -28,7 +28,7 @@
           if (grid.options.rowTemplate) {
             var rowTemplateFnPromise = $q.defer();
             grid.getRowTemplateFn = rowTemplateFnPromise.promise;
-            
+
             gridUtil.getTemplate(grid.options.rowTemplate)
               .then(
                 function (template) {
@@ -108,7 +108,7 @@
             } else {
               col[providedType] = colDef[templateType];
             }
- 
+
              templateGetPromises.push(gridUtil.getTemplate(col[providedType])
                 .then(
                 function (template) {
@@ -117,7 +117,7 @@
                   if ( tooltipType && col[tooltipType] === false ){
                     template = template.replace(uiGridConstants.TOOLTIP, '');
                   } else if ( tooltipType && col[tooltipType] ){
-                    template = template.replace(uiGridConstants.TOOLTIP, 'title="{{' + tooltipCall + ' CUSTOM_FILTERS }}"');
+                    template = template.replace(uiGridConstants.TOOLTIP, 'title="{[' + tooltipCall + ' CUSTOM_FILTERS ]}"');
                   }
 
                   if ( filterType ){
@@ -182,7 +182,7 @@
 
           return $q.all(templateGetPromises);
         },
-        
+
 
         rowTemplateAssigner: function rowTemplateAssigner(row) {
           var grid = this;
@@ -206,7 +206,7 @@
               .then(function (template) {
                 // Compile the template
                 var rowTemplateFn = $compile(template);
-                
+
                 // Resolve the compiled template function promise
                 perRowTemplateFnPromise.resolve(rowTemplateFn);
               },

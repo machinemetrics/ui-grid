@@ -6,10 +6,10 @@
     ng-if="colFilter.type !== 'select'">
     <input
       type="text"
-      class="ui-grid-filter-input ui-grid-filter-input-{{$index}}"
+      class="ui-grid-filter-input ui-grid-filter-input-{[$index]}"
       ng-model="colFilter.term"
-      ng-attr-placeholder="{{colFilter.placeholder || ''}}"
-      aria-label="{{colFilter.ariaLabel || aria.defaultFilterLabel}}" />
+      ng-attr-placeholder="{[colFilter.placeholder || '']}"
+      aria-label="{[colFilter.ariaLabel || aria.defaultFilterLabel]}" />
 
     <div
       role="button"
@@ -29,10 +29,10 @@
   <div
     ng-if="colFilter.type === 'select'">
     <select
-      class="ui-grid-filter-select ui-grid-filter-input-{{$index}}"
+      class="ui-grid-filter-select ui-grid-filter-input-{[$index]}"
       ng-model="colFilter.term"
-      ng-attr-placeholder="{{colFilter.placeholder || aria.defaultFilterLabel}}"
-      aria-label="{{colFilter.ariaLabel || ''}}"
+      ng-attr-placeholder="{[colFilter.placeholder || aria.defaultFilterLabel]}"
+      aria-label="{[colFilter.ariaLabel || '']}"
       ng-options="option.value as option.label for option in colFilter.selectOptions">
       <option value=""></option>
     </select>

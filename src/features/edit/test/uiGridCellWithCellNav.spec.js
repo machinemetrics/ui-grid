@@ -19,7 +19,7 @@ xdescribe('ui.grid.edit GridCellDirective with CellNav feature', function () {
     uiGridConstants = _uiGridConstants_;
     $timeout = _$timeout_;
 
-    $templateCache.put('ui-grid/uiGridCell', '<div class="ui-grid-cell-contents">{{COL_FIELD CUSTOM_FILTERS}}</div>');
+    $templateCache.put('ui-grid/uiGridCell', '<div class="ui-grid-cell-contents">{[COL_FIELD CUSTOM_FILTERS]}</div>');
     $templateCache.put('ui-grid/cellEditor', '<div><input ng-model="COL_FIELD" ui-grid-editor /></div>');
 
     scope = $rootScope.$new();
@@ -37,7 +37,7 @@ xdescribe('ui.grid.edit GridCellDirective with CellNav feature', function () {
 
     scope.grid = grid;
     scope.col = grid.columns[0];
-    scope.col.cellTemplate = '<div class="ui-grid-cell-contents">{{COL_FIELD}}</div>';
+    scope.col.cellTemplate = '<div class="ui-grid-cell-contents">{[COL_FIELD]}</div>';
     scope.row = grid.rows[0];
 
     var gridController = {

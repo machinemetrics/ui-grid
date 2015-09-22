@@ -389,7 +389,7 @@ module.service('gridUtil', ['$log', '$window', '$document', '$http', '$templateC
           endSym = $interpolate.endSymbol();
 
       // If either of the interpolation symbols have been changed, we need to alter this template
-      if (startSym !== '{{' || endSym !== '}}') {
+      if (startSym !== '{[' || endSym !== ']}') {
         template = template.replace(/\{\{/g, startSym);
         template = template.replace(/\}\}/g, endSym);
       }

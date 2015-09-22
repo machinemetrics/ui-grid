@@ -3,6 +3,6 @@
   ui-grid-one-bind-id-grid="rowRenderIndex + '-' + col.uid + '-cell'"
   class="ui-grid-cell"
   ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }"
-  role="{{col.isRowHeader ? 'rowheader' : 'gridcell'}}"
+  role="{[col.isRowHeader ? 'rowheader' : 'gridcell']}"
   ui-grid-cell>
 </div>

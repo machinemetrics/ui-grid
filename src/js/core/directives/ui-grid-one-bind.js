@@ -43,7 +43,7 @@
        * @memberof ui.grid.directive:uiGridOneBind
        * @element img
        * @restrict A
-       * @param {String} uiGridOneBindSrc The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindSrc The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the src dom tag.
        *
        */
@@ -53,7 +53,7 @@
        * @name ui.grid.directive:uiGridOneBindText
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindText The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindText The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the text dom tag.
        */
       {tag: 'Text', method: 'text'},
@@ -62,7 +62,7 @@
        * @name ui.grid.directive:uiGridOneBindHref
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindHref The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindHref The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the href dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Href', method: 'attr'},
@@ -71,7 +71,7 @@
        * @name ui.grid.directive:uiGridOneBindClass
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindClass The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindClass The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @param {Object} uiGridOneBindClass The object that you want to bind. At least one of the values in the object must be something other than null or undefined for the watcher to be removed.
        *                                    this is to prevent the watcher from being removed before the scope is initialized.
        * @param {Array} uiGridOneBindClass An array of classes to bind to this element.
@@ -83,7 +83,7 @@
        * @name ui.grid.directive:uiGridOneBindHtml
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindHtml The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindHtml The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the html method on a dom element. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Html', method: 'html'},
@@ -92,7 +92,7 @@
        * @name ui.grid.directive:uiGridOneBindAlt
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindAlt The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAlt The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the alt dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Alt', method: 'attr'},
@@ -101,7 +101,7 @@
        * @name ui.grid.directive:uiGridOneBindStyle
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindStyle The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindStyle The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the style dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Style', method: 'css'},
@@ -110,7 +110,7 @@
        * @name ui.grid.directive:uiGridOneBindValue
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindValue The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindValue The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the value dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Value', method: 'attr'},
@@ -119,7 +119,7 @@
        * @name ui.grid.directive:uiGridOneBindId
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindId The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindId The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the value dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Id', method: 'attr'},
@@ -128,7 +128,7 @@
        * @name ui.grid.directive:uiGridOneBindIdGrid
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindIdGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindIdGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the id dom tag.
        * <h1>Important Note!</h1>
        * If the id tag passed as a parameter does <b>not</b> contain the grid id as a substring
@@ -143,7 +143,7 @@
        * @name ui.grid.directive:uiGridOneBindTitle
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindTitle The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindTitle The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the title dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        */
       {tag: 'Title', method: 'attr'},
@@ -152,7 +152,7 @@
        * @name ui.grid.directive:uiGridOneBindAriaLabel
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindAriaLabel The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAriaLabel The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the aria-label dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        *<br/>
        * <pre>
@@ -169,7 +169,7 @@
        * @name ui.grid.directive:uiGridOneBindAriaLabelledby
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindAriaLabelledby The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAriaLabelledby The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the aria-labelledby dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        *<br/>
        * <pre>
@@ -186,7 +186,7 @@
        * @name ui.grid.directive:uiGridOneBindAriaLabelledbyGrid
        * @element div
        * @restrict A
-       * @param {String} uiGridOneBindAriaLabelledbyGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAriaLabelledbyGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the aria-labelledby dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        * Works somewhat like {@link ui.grid.directive:uiGridOneBindIdGrid} however this one supports a list of ids (seperated by a space) and will dynamically add the
        * grid id to each one.
@@ -205,7 +205,7 @@
        * @name ui.grid.directive:uiGridOneBindAriaDescribedby
        * @element ANY
        * @restrict A
-       * @param {String} uiGridOneBindAriaDescribedby The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAriaDescribedby The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the aria-describedby dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        *<br/>
        * <pre>
@@ -222,7 +222,7 @@
        * @name ui.grid.directive:uiGridOneBindAriaDescribedbyGrid
        * @element ANY
        * @restrict A
-       * @param {String} uiGridOneBindAriaDescribedbyGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{{scopeElt}}</code> instead use <code>scopeElt</code>.
+       * @param {String} uiGridOneBindAriaDescribedbyGrid The angular string you want to bind. Does not support interpolation. Don't use <code>{[scopeElt]}</code> instead use <code>scopeElt</code>.
        * @description One time binding for the aria-labelledby dom tag. For more information see {@link ui.grid.directive:uiGridOneBind}.
        * Works somewhat like {@link ui.grid.directive:uiGridOneBindIdGrid} however this one supports a list of ids (seperated by a space) and will dynamically add the
        * grid id to each one.

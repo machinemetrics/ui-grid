@@ -648,7 +648,7 @@
          *      name: 'myCol',
          *      treeAggregation: { type: uiGridTreeBaseConstants.aggregation.SUM },
          *      treeAggregationUpdateEntity: true
-         *      cellTemplate: '<div>{{row.entity.myCol + " " + row.treeNode.aggregations[0].rendered}}</div>'
+         *      cellTemplate: '<div>{[row.entity.myCol + " " + row.treeNode.aggregations[0].rendered]}</div>'
          *    }];
          * </pre>
          */

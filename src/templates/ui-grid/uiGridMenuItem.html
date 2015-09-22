@@ -4,7 +4,7 @@
   ng-click="itemAction($event, title)"
   ng-show="itemShown()"
   ng-class="{ 'ui-grid-menu-item-active': active(), 'ui-grid-sr-only': (!focus && screenReaderOnly) }"
-  aria-pressed="{{active()}}"
+  aria-pressed="{[active()]}"
   tabindex="0"
   ng-focus="focus=true"
   ng-blur="focus=false">
@@ -13,5 +13,5 @@
      aria-hidden='true'>
       &nbsp;
     </i>
-    {{ name }}
+    {[ name ]}
 </button>

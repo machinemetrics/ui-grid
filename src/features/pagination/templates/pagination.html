@@ -41,7 +41,7 @@
         class="ui-grid-pager-control-input"
         ng-model="grid.options.paginationCurrentPage"
         min="1"
-        max="{{ paginationApi.getTotalPages() }}"
+        max="{[ paginationApi.getTotalPages() ]}"
         required />
       <span
         class="ui-grid-pager-max-pages-number"
@@ -50,7 +50,7 @@
           ui-grid-one-bind-title="paginationOf">
           /
         </abbr>
-        {{ paginationApi.getTotalPages() }}
+        {[ paginationApi.getTotalPages() ]}
       </span>
       <button
         type="button"
@@ -86,13 +86,13 @@
       <span
         ui-grid-one-bind-id-grid="'items-per-page-label'"
         class="ui-grid-pager-row-count-label">
-        &nbsp;{{sizesLabel}}
+        &nbsp;{[sizesLabel]}
       </span>
     </div>
     <span
       ng-if="grid.options.paginationPageSizes.length <= 1"
       class="ui-grid-pager-row-count-label">
-      {{grid.options.paginationPageSize}}&nbsp;{{sizesLabel}}
+      {[grid.options.paginationPageSize]}&nbsp;{[sizesLabel]}
     </span>
   </div>
   <div
@@ -101,12 +101,12 @@
       class="ui-grid-pager-count">
       <span
         ng-show="grid.options.totalItems > 0">
-        {{showingLow}}
+        {[showingLow]}
         <abbr
           ui-grid-one-bind-title="paginationThrough">
           -
         </abbr>
-        {{showingHigh}} {{paginationOf}} {{grid.options.totalItems}} {{totalItemsLabel}}
+        {[showingHigh]} {[paginationOf]} {[grid.options.totalItems]} {[totalItemsLabel]}
       </span>
     </div>
   </div>

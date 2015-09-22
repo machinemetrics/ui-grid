@@ -3,7 +3,7 @@
     <ul ng-show="groupings.length > 0" class="ngGroupList">
         <li class="ngGroupItem" ng-repeat="group in configGroups">
                 <span class="ngGroupElement">
-                    <span class="ngGroupName">{{group.displayName}}
+                    <span class="ngGroupName">{[group.displayName]}
                         <span ng-click="removeGroup($index)" class="ngRemoveGroup">x</span>
                     </span>
                     <span ng-hide="$last" class="ngGroupArrow"></span>

@@ -394,7 +394,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
 
       uiGridTreeBaseService.addOrUseNode( grid, fakeRow, parents, aggregations );
 
-      expect( grid.treeBase.tree ).toEqual( [ { 
+      expect( grid.treeBase.tree ).toEqual( [ {
         state: 'collapsed',
         row: fakeRow,
         parentRow: null,
@@ -446,12 +446,12 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
         treeLevel: 1
       };
 
-      grid.treeBase.tree = [{ 
-        state: 'expanded', 
-        row: fakeRootRow, 
-        parentRow: null, 
+      grid.treeBase.tree = [{
+        state: 'expanded',
+        row: fakeRootRow,
+        parentRow: null,
         aggregations: [],
-        children: [] 
+        children: []
       }];
 
       fakeRootRow.treeNode = grid.treeBase.tree[0];
@@ -461,7 +461,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
 
       uiGridTreeBaseService.addOrUseNode( grid, fakeRow, parents, aggregations );
 
-      expect( grid.treeBase.tree[0].children[0] ).toEqual( { 
+      expect( grid.treeBase.tree[0].children[0] ).toEqual( {
         state: 'collapsed',
         row: fakeRow,
         parentRow: fakeRootRow,
@@ -487,11 +487,11 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
       };
 
       grid.treeBase.tree = [{
-        state: 'expanded', 
-        row: fakeRootRow, 
-        parentRow: null, 
+        state: 'expanded',
+        row: fakeRootRow,
+        parentRow: null,
         aggregations: [],
-        children: [] 
+        children: []
       }];
 
       fakeRootRow.treeNode = grid.treeBase.tree[0];
@@ -501,7 +501,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
 
       uiGridTreeBaseService.addOrUseNode( grid, fakeRow, parents, aggregations );
 
-      expect( grid.treeBase.tree[0].children[0] ).toEqual( { 
+      expect( grid.treeBase.tree[0].children[0] ).toEqual( {
         state: 'expanded',
         row: fakeRow,
         parentRow: fakeRootRow,
@@ -527,7 +527,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
 
       uiGridTreeBaseService.addOrUseNode( grid, fakeRow, parents, aggregations );
 
-      expect( grid.treeBase.tree[0] ).toEqual( { 
+      expect( grid.treeBase.tree[0] ).toEqual( {
         state: 'collapsed',
         row: fakeRow,
         parentRow: null,
@@ -550,10 +550,10 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
       };
 
       grid.treeBase.tree = [{
-        state: 'expanded', 
-        row: fakeRootRow, 
-        parentRow: null, 
-        children: [] 
+        state: 'expanded',
+        row: fakeRootRow,
+        parentRow: null,
+        children: []
       }];
 
       fakeRootRow.treeNode = grid.treeBase.tree[0];
@@ -563,7 +563,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
 
       uiGridTreeBaseService.addOrUseNode( grid, fakeRow, parents, aggregations );
 
-      expect( grid.treeBase.tree[0].children[0] ).toEqual( { 
+      expect( grid.treeBase.tree[0].children[0] ).toEqual( {
         state: 'collapsed',
         row: fakeRow,
         parentRow: fakeRootRow,
@@ -715,11 +715,11 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
       expect( result[1].col.name ).toEqual('col2', 'col2 is second aggregation');
       delete result[1].col;
       expect( result ).toEqual([
-        { 
+        {
           type: 'sum',
           label: 'total: '
         },
-        { 
+        {
           label: 'custom- '
         }
       ]);
@@ -762,10 +762,10 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
       var parents = [
         { treeNode: { aggregations: [
           { col: grid.columns[4], custom: 20 }
-        ]}},
+        ]]},
         { treeNode: { aggregations: [
           { col: grid.columns[4], custom: 19 }
-        ]}}
+        ]]}
       ];
 
       uiGridTreeBaseService.aggregate(grid, grid.rows[2], parents );
@@ -788,23 +788,23 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
   describe( 'finaliseAggregations', function() {
     it( 'no aggregations', function() {
       var fakeRow = { treeNode: { aggregations: [
-      ]}};
+      ]]};
 
       uiGridTreeBaseService.finaliseAggregations( fakeRow );
 
       expect( fakeRow ).toEqual( { treeNode: { aggregations: [
-      ]}});
+      ]]});
     });
 
     it( 'some aggregations', function() {
       var fakeColumn = { uid: '123', treeAggregationUpdateEntity: true, customTreeAggregationFinalizerFn: function( aggregation ){
         aggregation.rendered = 'custom';
-      }};
+      ]};
 
       var fakeRow = { entity: {}, treeNode: { aggregations: [
         { value: 10, label: 'test: ', col: fakeColumn },
         { value: 10, label: 'test: ', col: { uid: '345', treeAggregationUpdateEntity: true } }
-      ]}};
+      ]]};
 
       uiGridTreeBaseService.finaliseAggregations( fakeRow );
 
@@ -817,7 +817,7 @@ describe('ui.grid.treeBase uiGridTreeBaseService', function () {
         }, treeNode: { aggregations: [
         { value: 10, label: 'test: ', rendered: 'custom'},
         { value: 10, label: 'test: ', rendered: 'test: 10' }
-      ]}});
+      ]]});
     });
   });
 });
